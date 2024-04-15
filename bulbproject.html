@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb OF On </title>
+    <style>
+        .bulb-on ,.bulb-off{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        
+        .bulb-on img,.bulb-off img{
+            width: 20%;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div>
+        <div class="bulb-on" id="bulb-on">
+            <img src="bulb-on.png" alt="" class="bulb">
+            <button id="off" style="align-self: flex-center; padding: 5px; font-size: 24px; background-color: burlywood; color: black;cursor: pointer;"> Bulb Off</button>
+        </div>
+        <!-- <div class="bulb-off" id="bulb-off">
+            <img src="bulb-off.png" alt="" srcset="">
+            <button id="on" style="align-self: flex-center;"> Bulb On</button>
+        </div> -->
+    </div>
+    <script>
+        const bulb = document.querySelector('.bulb')
+        const btn = document.querySelector('#off')
+        btn.addEventListener('click',function (){
+            if(btn.textContent == 'Bulb On'){
+                bulb.src  = 'bulb-on.png';
+                btn.textContent = 'Bulb Off';
+                btn.style.backgroundColor = 'burlywood'
+            }else
+            {
+                bulb.src  = 'bulb-off.png';
+                btn.textContent = 'Bulb On';
+                btn.style.backgroundColor = 'white'
+            }
+        })
+    </script>
+</body>
+</html>
